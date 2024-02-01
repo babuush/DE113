@@ -6,12 +6,12 @@ public class Secured_pwd {
         System.out.print("Please enter passphrase input: ");
         String input = scanner.nextLine();
         String[] words = input.split(" ");
-        String output = "";
+        StringBuilder output = new StringBuilder();
 
         for (String word : words) {
-            output += word.charAt(0);
-            output += word.charAt(word.length() - 1);
+            output.append(word.charAt(0));
+            output.append(word.charAt(word.length() - 1));
         }
-        System.out.println("Secured password for this passphrase: " + output.toUpperCase());
+        System.out.println("Secured password for this passphrase: " + output.toString().toUpperCase());
     }
 }
