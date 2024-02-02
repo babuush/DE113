@@ -8,6 +8,7 @@ public class Secured_pwd {
         String[] words = input.split(" ");
         StringBuilder output = new StringBuilder();
 
+        // Loop to get first and last letter of each word
         for (String word : words) {
             output.append(word.charAt(0));
             output.append(word.charAt(word.length() - 1));

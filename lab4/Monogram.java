@@ -5,8 +5,9 @@ public class Monogram {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter your full name: ");
         String fullName = scanner.nextLine();
-        //
+
         StringBuilder initials = new StringBuilder();
+        // Loop to add the first letter of each word
         for (String name : fullName.split(" ")) {
             initials.append(name.charAt(0));
         }

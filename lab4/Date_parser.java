@@ -8,6 +8,7 @@ public class Date_parser {
         String data_string = sdf.format(today);
         System.out.println(data_string);
         String dateString = data_string.substring(0,13);
+        // Splitting the input sting
         String[] dateArray = dateString.split("-");
         System.out.println("Date: "+dateArray[0].strip());
         System.out.println("Month: "+dateArray[1].strip());
