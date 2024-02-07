@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Temperature {
@@ -29,16 +30,14 @@ public class Temperature {
     }
 
     public static void main(String[] args) {
+        DecimalFormat df = new DecimalFormat("0.00");
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter temperature in degrees Fahrenheit: ");
         double tempFahrenheit = scanner.nextDouble();
 
         Temperature temperature = new Temperature(tempFahrenheit);
-
-        double tempCelsius = temperature.toCelsius();
-
-        System.out.println("Temperature in degrees Celsius: " + tempCelsius);
+        System.out.println("Temperature in degrees Celsius: " + df.format(temperature.toCelsius()));
 
         scanner.close();
     }
