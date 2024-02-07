@@ -3,6 +3,7 @@ public class Monster {
     private final int attackPow;
     private int health;
 
+    // Constructor
     public Monster(String name, int attackPow) {
         this.name = name;
         this.attackPow = attackPow;
