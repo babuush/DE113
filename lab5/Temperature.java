@@ -14,7 +14,7 @@ public class Temperature {
         return (temperatureFahrenheit - 32) * 5 / 9;
     }
 
-    // Method to convert Celsius to Fahrenheit
+    // Method to convert to Fahrenheit
     public double toFahrenheit() {
         return temperatureFahrenheit;
     }
