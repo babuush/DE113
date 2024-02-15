@@ -15,17 +15,19 @@ public class Product {
         this.description = description;
     }
 
-    public String getDetail() {
-        return "Product name: " + name + ", unit price: " + price + ", description: " + description;
+    public void getDetail() {
+        System.out.println("Product name: " + name + ", unit price: " + price + ", description: " + description);
     }
 
-    public String getDetail(String detail) {
-        return switch (detail) {
-            case "name" -> "Product name: " + name;
-            case "price" -> "Product unit price: " + price;
-            case "description" -> "Product description: " + description;
-            default -> "Please use one of the following correct field name: name, price, description";
-        };
+    public void getDetail(String detail) {
+        switch (detail) {
+            case "name" -> System.out.println("Product name: " + name);
+            case "price" -> System.out.println("Product unit price: " + price);
+            case "description" -> System.out.println("Product description: " + description);
+            default ->
+                    System.out.println("Please use one of the following correct field name: name, price, description");
+        }
+        ;
     }
 
 }
