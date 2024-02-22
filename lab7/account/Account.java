@@ -14,11 +14,11 @@ public class Account {
     }
 
     private void setAge(int age) throws AgeException {
-        if (age < 18) {
-            throw new AgeException("Age must be at least 18 years old.");
-        }
         if (age <= 0) {
             throw new AgeException("Age must be a positive integer number.");
+        }
+        if (age < 18) {
+            throw new AgeException("Age must be at least 18 years old.");
         }
         this.age = age;
     }
