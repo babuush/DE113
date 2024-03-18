@@ -6,6 +6,7 @@ public class problem10 {
         System.out.print("Enter a sentence: ");
         String sentence = scanner.nextLine();
 
+        // Loop until string is empty.
         while (!sentence.isEmpty())  {
             StringBuffer reversedSentence = new StringBuffer(sentence).reverse();
             System.out.println("reversed sentence = " + reversedSentence);
