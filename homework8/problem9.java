@@ -13,7 +13,7 @@ public class problem9 {
             } else {
                 char check = inputVariable.charAt(0);
                 System.out.println("The ASCII v" +
-                        "alue of " + check + " is " + (int) check);
+                        "value of " + check + " is " + (int) check);
             }
             System.out.print("Enter a character: ");
             inputVariable = scanner.nextLine();
