@@ -4,6 +4,8 @@ public class problem11 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+
+        // Loop until string is empty
         while (true) {
             System.out.print("Enter a sentence: ");
             String sentence = scanner.nextLine().trim();
