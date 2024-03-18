@@ -6,6 +6,7 @@ public class problem9 {
         System.out.print("Enter a character: ");
         String inputVariable = scanner.nextLine();
 
+        // Loop until @ is read.
         while ((int) inputVariable.charAt(0) != 64) {
             int length = inputVariable.length();
             if (length > 1) {
