@@ -12,7 +12,7 @@ public class problem9 {
                 System.out.println("Error: more than one character entered");
             } else {
                 char check = c.charAt(0);
-                System.out.println("The ASCII value of" + check + "is" + (int) check);
+                System.out.println("The ASCII value of " + check + " is " + (int) check);
             }
             System.out.print("Enter a character: ");
             c = scanner.nextLine();
