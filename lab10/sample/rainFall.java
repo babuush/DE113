@@ -1,3 +1,5 @@
+package sample;
+
 import javax.swing.*;
 import java.util.Arrays;
 
@@ -12,6 +14,6 @@ public class rainFall {
             annualAverage = sum / rainfall.length;
         }
         JOptionPane.showMessageDialog(null, "Avg: "+ annualAverage);
-        //System.out.println("rainFall Arrays: "+ Arrays.toString(rainfall));
+        //System.out.println("sample.rainFall Arrays: "+ Arrays.toString(rainfall));
     }
 }
