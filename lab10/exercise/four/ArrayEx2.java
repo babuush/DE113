@@ -8,7 +8,7 @@ public class ArrayEx2 {
         browsers[1] = "chrome";
         browsers[2] = "opera";
         browsers[3] = "firefox";
-        System.out.print("size of array: " + browsers.length);
+        System.out.println("size of array: " + browsers.length);
         for (String browser : browsers) {
             System.out.println(browser);
 
