@@ -12,6 +12,6 @@ public class rainFall {
             sum += rainfall[i];
             annualAverage = sum / rainfall.length;
         }
-        JOptionPane.showMessageDialog(null, "Avg"+ annualAverage);
+        JOptionPane.showMessageDialog(null, "Avg: "+ annualAverage);
     }
 }
