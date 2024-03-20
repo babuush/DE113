@@ -6,9 +6,7 @@ public class rainFall {
         double annualAverage = 0, sum = 0.0;
 
         for (int i = 0; i < rainfall.length; i++) {
-            rainfall[i] = Double.parseDouble(
-                    JOptionPane.showInputDialog(null,
-                            "Rainfall for month " + (i + 1)));
+            rainfall[i] = Double.parseDouble(JOptionPane.showInputDialog(null, "Rainfall for month " + (i + 1)));
             sum += rainfall[i];
             annualAverage = sum / rainfall.length;
         }
