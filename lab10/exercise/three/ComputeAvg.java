@@ -1,5 +1,6 @@
 package exercise.three;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class ComputeAvg {
@@ -9,11 +10,11 @@ public class ComputeAvg {
         Scanner scanner = new Scanner(System.in);
 
         for (int i = 0; i < 5; i++) {
-            System.out.println("Enter the score " + (i+1));
-            scoreArray[i] = scanner.nextInt();
+
+            scoreArray[i] = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter score " + (i + 1)));
             sum += scoreArray[i];
         }
         averageScore = sum / 5;
-        System.out.println("Average test score is: " + averageScore);
+        JOptionPane.showMessageDialog(null, "Avg: "+ averageScore);
     }
 }
