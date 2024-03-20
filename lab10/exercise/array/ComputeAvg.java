@@ -1,4 +1,4 @@
-package exercise.three;
+package exercise.array;
 
 import javax.swing.*;
 import java.util.Scanner;

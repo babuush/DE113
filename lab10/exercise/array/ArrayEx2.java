@@ -1,4 +1,4 @@
-package exercise.four;
+package exercise.array;
 
 public class ArrayEx2 {
 

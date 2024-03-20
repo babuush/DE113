@@ -1,4 +1,4 @@
-package exercise;
+package exercise.array;
 
 public class exercise1 {
 
