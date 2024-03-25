@@ -51,6 +51,12 @@ public class problem2 {
         return diffs;
     }
 
+    public double getTempOfDay(double[] temp, int month, int day) {
+        // Assuming month indices start from 1 and days start from 1
+        int index = (month - 1) * 30 + (day - 1);
+        return temp[index];
+    }
+
     public static void main(String[] args) {
         problem2 p = new problem2(); // Create an instance of problem2
         double[] temperature = new double[365];
