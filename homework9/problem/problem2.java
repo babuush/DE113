@@ -1,3 +1,5 @@
+package problem;
+
 public class problem2 {
 
     public double getHottest(double[] temp) {
@@ -58,7 +60,7 @@ public class problem2 {
     }
 
     public static void main(String[] args) {
-        problem2 p = new problem2(); // Create an instance of problem2
+        problem2 p = new problem2(); // Create an instance of problem.problem2
         double[] temperature = new double[365];
         // Assume temperature array is filled with actual temperature data
 
