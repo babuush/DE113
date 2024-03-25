@@ -31,27 +31,24 @@ public class problem2 {
         return sum / count;
     }
 
-    public double diffTemp(double[] temp, int month) {
-        // Assuming month indices start from 1
-        int startDay = (month - 1) * 30;
-        int endDay = month * 30 - 1;
-        double hottest = temp[startDay];
-        double coldest = temp[startDay];
-        for (int i = startDay + 1; i <= endDay; i++) {
-            if (temp[i] > hottest) {
-                hottest = temp[i];
+    public double[] diffTemp(double[] temp) {
+        double[] diffs = new double[12]; // Array to store differences for each month
+        for (int month = 1; month <= 12; month++) {
+            int startDay = (month - 1) * 30;
+            int endDay = month * 30 - 1;
+            double hottest = temp[startDay];
+            double coldest = temp[startDay];
+            for (int i = startDay + 1; i <= endDay; i++) {
+                if (temp[i] > hottest) {
+                    hottest = temp[i];
+                }
+                if (temp[i] < coldest) {
+                    coldest = temp[i];
+                }
             }
-            if (temp[i] < coldest) {
-                coldest = temp[i];
-            }
+            diffs[month - 1] = hottest - coldest; // Store difference for current month
         }
-        return hottest - coldest;
-    }
-
-    public double getTempOfDay(double[] temp, int month, int day) {
-        // Assuming month indices start from 1 and days start from 1
-        int index = (month - 1) * 30 + (day - 1);
-        return temp[index];
+        return diffs;
     }
 
     public static void main(String[] args) {
@@ -64,17 +61,15 @@ public class problem2 {
         System.out.println("Hottest temperature: " + hottest);
         System.out.println("Coldest temperature: " + coldest);
 
-        //Calculate the average temperature for January
+        //Calculate the average temperature for January (assuming month index starts from 1)
         int january = 1;
         double avgJanuary = p.avgMonth(temperature, january);
         System.out.println("Average temperature for January: " + avgJanuary);
 
-        //Calculate the difference in temperature for January
-        double diffJanuary = p.diffTemp(temperature, january);
-        System.out.println("Difference in temperature for January: " + diffJanuary);
-
-        //Get the temperature for January 15th
-        double tempJan15 = p.getTempOfDay(temperature, january, 15);
-        System.out.println("Temperature for January 15th: " + tempJan15);
+        //Get the difference in temperature for every month
+        double[] diffs = p.diffTemp(temperature);
+        for (int i = 0; i < diffs.length; i++) {
+            System.out.println("Difference in temperature for month " + (i + 1) + ": " + diffs[i]);
+        }
     }
 }
